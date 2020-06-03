@@ -180,6 +180,15 @@ spec:
     value: image-registry.openshift-image-registry.svc:5000/pipelines-tutorial/vote-ui:latest
 ```
 
+Create both of these resources.
+```bash
+kubectl apply -f git-resource.yaml
+```
+
+```bash
+kubectl apply -f iamge-resource.yaml
+```
+
 In the following example, you can see a `Task` definition with the `git` input and `image` output
 introduced earlier. The arguments of the `Task` command support variable substitution so that
 the `Task` definition is constant and the value of parameters can change during runtime.
@@ -223,6 +232,10 @@ spec:
         - --context=$(params.pathToContext)
 ```
 
+Create your build task
+```bash
+kubectl apply -f build-docker-image-task.yaml
+```
 ### Running your `Task`
 
 You are now ready for your first `TaskRun`!
@@ -258,7 +271,7 @@ spec:
 Save the YAML files that contain your `Task`, `TaskRun`, and `PipelineResource` definitions and apply them using the following command:
 
 ```bash
-kubectl apply -f <name-of-file.yaml>
+kubectl apply -f task-run.yaml
 ```
 
 To examine the resources you've created so far, use the following command:
