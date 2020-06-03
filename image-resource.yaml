@@ -1,9 +1,9 @@
 apiVersion: tekton.dev/v1alpha1
 kind: PipelineResource
 metadata:
-  name: hello-world
+  name: ui-image
 spec:
   type: image
   params:
   - name: url
-    value: image-registry.openshift-image-registry.svc:5000/pipelines-tutorial/hello-world:latest
+    value: image-registry.openshift-image-registry.svc:5000/pipelines-tutorial/vote-ui:latest
