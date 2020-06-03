@@ -9,7 +9,7 @@ spec:
   params:
     - name: pathToDockerFile
       value: Dockerfile
- resources:
+  resources:
     inputs:
       - name: docker-source
         resourceRef:

@@ -186,7 +186,7 @@ kubectl apply -f git-resource.yaml
 ```
 
 ```bash
-kubectl apply -f iamge-resource.yaml
+kubectl apply -f image-resource.yaml
 ```
 
 In the following example, you can see a `Task` definition with the `git` input and `image` output
