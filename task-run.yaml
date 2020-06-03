@@ -13,8 +13,8 @@ spec:
     inputs:
       - name: docker-source
         resourceRef:
-          name: skaffold-git
+          name: ui-repo
     outputs:
       - name: builtImage
         resourceRef:
-          name: skaffold-image
+          name: ui-image

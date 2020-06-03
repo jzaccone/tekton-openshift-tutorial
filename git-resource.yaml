@@ -1,11 +1,9 @@
-apiVersion: tekton.dev/v1alpha1
+apiVersion: tekton.dev/v1beta1
 kind: PipelineResource
 metadata:
-  name: skaffold-git
+  name: ui-repo
 spec:
   type: git
   params:
-    - name: revision
-      value: master
-    - name: url
-      value: https://github.com/GoogleContainerTools/skaffold
+  - name: url
+    value: http://github.com/openshift-pipelines/vote-ui.git
