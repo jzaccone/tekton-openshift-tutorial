@@ -1,9 +1,10 @@
+
 apiVersion: tekton.dev/v1beta1
 kind: PipelineResource
 metadata:
-  name: ui-image
+  name: skaffold-image
 spec:
   type: image
   params:
-  - name: url
-    value: image-registry.openshift-image-registry.svc:5000/pipelines-tutorial/vote-ui:latest
+    - name: url
+      value: image-registry.openshift-image-registry.svc:5000/pipelines-tutorial/scoffold-image:latest
